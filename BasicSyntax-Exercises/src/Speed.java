@@ -21,12 +21,12 @@ public class Speed {
         int hoursToSeconds = hoursInput * 3600;
         int minutesToSeconds = minutesInput * 60;
 
-        int sumSeconds = hoursToSeconds + minutesToSeconds + secondsInput;
+        float sumSeconds = hoursToSeconds + minutesToSeconds + secondsInput;
 
-        int disDivisionTime = distanceInMeters / sumSeconds;
+        float disDivisionTime = distanceInMeters/sumSeconds;
 
         System.out.println(sumSeconds);
-        System.out.println(distanceInMeters);
+        System.out.println(disDivisionTime);
         System.out.printf(String.format("The average is: %.6f", disDivisionTime));
 
     }
