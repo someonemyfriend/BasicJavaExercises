@@ -1,3 +1,5 @@
+//need to think more here
+
 import java.util.Scanner;
 
 public class Ex18LeapYearChecker {
@@ -6,10 +8,22 @@ public class Ex18LeapYearChecker {
 
         int year = Integer.parseInt(scan.nextLine());
 
-        switch (year) {
-            case 2020:
-                
+        boolean isLeapYear;
+        isLeapYear = (year % 4 == 0);
+
+        isLeapYear = isLeapYear && (year % 100 != 0 || year % 400 == 0);
+
+
+        if (isLeapYear) {
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
         }
+
+//        switch (year) {
+//            case 2020:
+//
+//        }
 
 
 //        if(year % 4 == 0) {
@@ -28,6 +42,11 @@ public class Ex18LeapYearChecker {
 //        }else{
 //            System.out.println("It‘s not a leap year.");
 //        }
+
+
+
+
+
 
     }
 }
