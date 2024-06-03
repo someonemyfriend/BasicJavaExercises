@@ -7,14 +7,27 @@ public class Ex17Building {
         int n = Integer.parseInt(sc.nextLine());
         int m = Integer.parseInt(sc.nextLine());
 
-        for (int i = 1; i <= n; i++)
-        {
-            for (int j = 1; j <= m; j++)
-            {
-                if (i == 1 || i == n || j == 1 || j == m)
-                    System.out.print("*");
-                else
-                    System.out.print(" ");
+        for (int i = n; i >= 1; i--) {
+            int num = i * 10;
+            if (i == n) {
+                System.out.print("L" + num  + " ");
+            } else if (i % 2 == 0) {
+                System.out.print("O" + num + " ");
+            } else if (i % 2 != 0) {
+                System.out.print("A" + num + " ");
+            }
+
+
+            for (int j = 2; j <= m; j++) {
+                num += 1;
+                if (i == n) {
+                    System.out.print("L" + num + " ");
+                } else if (i % 2 == 0) {
+                    System.out.print("O" + num + " ");
+                } else if (i % 2 != 0) {
+                    System.out.print("A" + num + " ");
+                }
+
             }
             System.out.println();
         }
