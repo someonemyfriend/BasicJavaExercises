@@ -10,35 +10,35 @@ public class Ex14ArmstrongNumberCheck {
 
         String NUMBER_TO_STRING = Integer.toString(num);
         int numOfDigits = NUMBER_TO_STRING.length();
-        System.out.println("The child is " + NUMBER_TO_STRING);
-        System.out.println(numOfDigits);
+       // System.out.println("The child is " + NUMBER_TO_STRING);
+       // System.out.println(numOfDigits);
 
-        while (originalNum != 0)
-        {
-            remainder = originalNum % 10;
-
-          if(numOfDigits == 4) {
+      if(numOfDigits == 4) {
+          while (originalNum != 0) {
+              remainder = originalNum % 10;
+             // System.out.println("here is remainder " + remainder);
               result += Math.pow(remainder, 4);
               originalNum /= 10;
-              if(result == num) {
-                  System.out.println("true");
-              } else {
-                  System.out.println("false");
-              }
-          } else if(numOfDigits == 3) {
-              result += Math.pow(remainder, 4);
+          }
+          if (result == num) {
+              System.out.println("true");
+          } else {
+              System.out.println("false");
+          }
+      } else if(numOfDigits == 3) {
+          while (originalNum != 0)
+          {
+              remainder = originalNum % 10;
+             // System.out.println("here is remainder " + remainder);
+              result += Math.pow(remainder, 3);
               originalNum /= 10;
-              if(result == num) {
-                  System.out.println("true");
-              } else {
-                  System.out.println("false");
-              }
-        }
+          }
 
-
-        }
-
-
-
+          if(result == num) {
+              System.out.println("true");
+          } else {
+              System.out.println("false");
+          }
+      }
     }
 }
